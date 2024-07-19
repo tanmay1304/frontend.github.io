@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanmay Invoice Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Tanmay Invoice Generator</h1>
+
+  <form id="invoiceForm">
+    <div id="productList">
+      <div class="productItem">
+        <label for="productName">Product Name:</label>
+        <input type="text" class="productName" required>
+
+        <label for="date">Date:</label>
+        <input type="date" class="date" required>
+
+        <label for="price">Price:</label>
+        <input type="number" class="price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" class="quantity" required>
+      </div>
+    </div>
+    
+    <button type="button" onclick="addProduct()">Add Another Product</button>
+    <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+  </form>
+
+  <div id="invoice">
+    <h2>Invoice</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>GST (%)</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="invoiceBody"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
